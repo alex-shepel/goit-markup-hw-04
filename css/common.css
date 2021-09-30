@@ -124,6 +124,28 @@ footer {
 	margin-left: auto;
 }
 
+.header-contacts-list > .item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.header-contacts-list > .item::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.header-contacts-list > .item:nth-child(1)::before {
+	background-image: url("../images/envelope.svg");
+}
+
+.header-contacts-list > .item:nth-child(2)::before {
+	background-image: url("../images/smartphone.svg");
+}
+
 .page-header .logo {
 	color: var(--font-bold-color);
 }
