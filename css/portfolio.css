@@ -1,8 +1,8 @@
 /* portfolio content */
 
 .content {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: var(--padding-section);
+	padding-bottom: var(--padding-section);
 }
 
 .content-title {

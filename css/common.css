@@ -1,6 +1,8 @@
 /* custom CSS properties */
 
 :root {
+	--padding-section: 94px;
+
 	--accent-color: #2196f3;
 
 	--bg-white-color: #ffffff;
@@ -20,6 +22,7 @@
 /* utilities */
 
 .list {
+	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0;
 

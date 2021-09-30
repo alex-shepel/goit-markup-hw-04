@@ -46,8 +46,8 @@
 /* job features block */
 
 .features-and-job {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: var(--padding-section);
+	padding-bottom: var(--padding-section);
 }
 
 .features-list,
@@ -57,17 +57,17 @@
 }
 
 .features-list > .item {
-	flex-basis: calc(100% / 4 - 30px);
+	flex-basis: calc(100% / 4);
 }
 
 .job-list > .item {
-	flex-basis: calc(100% / 3 - 30px);
+	flex-basis: calc(100% / 3);
 }
 
 /* features section */
 
 .features {
-	margin-bottom: 94px;
+	margin-bottom: var(--padding-section);
 }
 
 .features-heading {
@@ -81,11 +81,39 @@
 	text-transform: uppercase;
 }
 
+.features-list > .item::before {
+	display: block;
+	content: "";
+	height: 120px;
+	width: 100%;
+	margin-bottom: 30px;
+
+	background-color: var(--bg-light-gray-color);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.features-list > .item:nth-child(1)::before {
+	background-image: url("../images/antenna.svg");
+}
+
+.features-list > .item:nth-child(2)::before {
+	background-image: url("../images/clock.svg");
+}
+
+.features-list > .item:nth-child(3)::before {
+	background-image: url("../images/diagram.svg");
+}
+
+.features-list > .item:nth-child(4)::before {
+	background-image: url("../images/astronaut.svg");
+}
+
 /* team section */
 
 .team {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: var(--padding-section);
+	padding-bottom: var(--padding-section);
 
 	background-color: var(--bg-light-gray-color);
 }
@@ -96,7 +124,7 @@
 }
 
 .team-list > .item {
-	flex-basis: calc(100% / 4 - 30px);
+	flex-basis: calc(100% / 4);
 
 	background-color: var(--bg-white-color);
 }
@@ -104,6 +132,7 @@
 .member-info {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	text-align: center;
 }
 
 .member-name {
@@ -114,13 +143,91 @@
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.2;
-	text-align: center;
 }
 
 .member-role {
 	font-size: 16px;
 	line-height: 1.2;
-	text-align: center;
+	margin-bottom: 16px;
+}
+
+.member-contacts {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.member-contacts > .item {
+	height: 44px;
+	width: 44px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+}
+
+.member-contacts > .item:nth-child(1) {
+	background-image: url("../images/teammate-instagram.svg");
+}
+
+.member-contacts > .item:nth-child(2) {
+	background-image: url("../images/teammate-twitter.svg");
+}
+
+.member-contacts > .item:nth-child(3) {
+	background-image: url("../images/teammate-facebook.svg");
+}
+
+.member-contacts > .item:nth-child(4) {
+	background-image: url("../images/teammate-linkedin.svg");
+}
+
+/* clients section */
+
+.clients {
+	padding-top: var(--padding-section);
+	padding-bottom: var(--padding-section);
+}
+
+.clients-list {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+.clients-list > .item {
+	height: 92px;
+	flex-basis: calc(100% / 6);
+
+	background-repeat: no-repeat;
+	background-position: center;
+
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+}
+
+.clients-list > .item:nth-child(1) {
+	background-image: url("../images/client-1.svg");
+}
+
+.clients-list > .item:nth-child(2) {
+	background-image: url("../images/client-2.svg");
+}
+
+.clients-list > .item:nth-child(3) {
+	background-image: url("../images/client-3.svg");
+}
+
+.clients-list > .item:nth-child(4) {
+	background-image: url("../images/client-4.svg");
+}
+
+.clients-list > .item:nth-child(5) {
+	background-image: url("../images/client-5.svg");
+}
+
+.clients-list > .item:nth-child(6) {
+	background-image: url("../images/client-6.svg");
 }
 
 /* button */
