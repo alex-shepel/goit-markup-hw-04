@@ -1,0 +1,130 @@
+/* sections common */
+
+.section-title {
+	margin-top: 0;
+	margin-bottom: 50px;
+
+	color: var(--font-bold-color);
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+/* hero section */
+
+.hero {
+	background-color: var(--bg-black-color);
+	text-align: center;
+}
+
+.hero-title {
+	margin-top: 0;
+	margin-bottom: 30px;
+
+	color: var(--font-inversed-color);
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.4;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+/* job features block */
+
+.features-and-job {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.features-list,
+.job-list {
+	display: flex;
+	gap: 30px;
+}
+
+.features-list > .item {
+	flex-basis: calc(100% / 4 - 30px);
+}
+
+.job-list > .item {
+	flex-basis: calc(100% / 3 - 30px);
+}
+
+/* features section */
+
+.features {
+	margin-bottom: 94px;
+}
+
+.features-heading {
+	margin-top: 0;
+	margin-bottom: 10px;
+
+	color: var(--font-bold-color);
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+/* team section */
+
+.team {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	background-color: var(--bg-gray-color);
+}
+
+.team-list {
+	display: flex;
+	gap: 30px;
+}
+
+.team-list > .item {
+	flex-basis: calc(100% / 4 - 30px);
+
+	background-color: var(--bg-white-color);
+}
+
+.member-info {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.member-name {
+	margin-top: 0;
+	margin-bottom: 10px;
+
+	color: var(--font-bold-color);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.member-role {
+	font-size: 16px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+/* button */
+
+.btn {
+	padding: 10px 32px;
+	min-width: 200px;
+
+	color: var(--font-inversed-color);
+	background-color: var(--accent-color);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.9;
+}
+
+.btn:hover,
+.btn:focus {
+	color: var(--font-bold-color);
+	background-color: var(--bg-gray-color);
+}
