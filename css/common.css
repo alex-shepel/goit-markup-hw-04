@@ -38,6 +38,17 @@ img {
 	max-width: 100%;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
 /* typographical preset */
 
 h1,
@@ -192,10 +203,6 @@ footer {
 .footer .container {
 	display: flex;
 	gap: 70px;
-}
-
-.footer .section-title {
-	display: none;
 }
 
 .footer .logo {
