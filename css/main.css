@@ -20,7 +20,8 @@
 	margin-right: auto;
 
 	background-color: var(--bg-dark-gray-color);
-	background-image: url("../images/hero-bg.jpg");
+	background-image: linear-gradient(to right, var(--bg-black-transparent-color), var(--bg-black-transparent-color)),
+		url("../images/hero-bg.jpg");
 	background-position: center;
 	text-align: center;
 }
