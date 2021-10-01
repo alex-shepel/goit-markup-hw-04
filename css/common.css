@@ -2,6 +2,7 @@
 
 :root {
 	--padding-section: 94px;
+	--grid-gap: 30px;
 
 	--accent-color: #2196f3;
 
@@ -13,6 +14,7 @@
 	--bg-black-transparent-color: rgba(47, 48, 58, 0.4);
 
 	--border-color: #eeeeee;
+	--icons-primary-color: #afb1b8;
 
 	--font-bold-color: #212121;
 	--font-primary-color: #757575;

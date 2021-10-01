@@ -1,3 +1,10 @@
+/* custom CSS properties */
+
+:root {
+	/* content table columns */
+	--table-cols: 3;
+}
+
 /* portfolio content */
 
 .content {
@@ -27,11 +34,16 @@
 	margin-top: 0;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: var(--grid-gap);
 }
 
+/*(100% - gap * (cols - 1)) / cols =
+= (100% - gap * cols + gap) / cols =
+= 100% / cols - gap + gap / cols =
+= (100% + gap) / cols - gap */
+
 .content-table > .item {
-	flex-basis: calc(100% / 3 - 30px);
+	flex-basis: calc((100% + var(--grid-gap)) / var(--table-cols) - var(--grid-gap));
 }
 
 .content-table > .item:hover,

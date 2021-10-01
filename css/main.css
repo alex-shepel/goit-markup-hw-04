@@ -1,3 +1,13 @@
+/* custom CSS properties */
+
+:root {
+	/* content columns */
+	--features-cols: 4;
+	--job-cols: 3;
+	--team-cols: 4;
+	--clients-cols: 6;
+}
+
 /* sections common */
 
 .section-title {
@@ -50,15 +60,25 @@
 .features-list,
 .job-list {
 	display: flex;
-	gap: 30px;
+	gap: var(--grid-gap);
 }
+
+/*(100% - gap * (cols - 1)) / cols =
+= (100% - gap * cols + gap) / cols =
+= 100% / cols - gap + gap / cols =
+= (100% + gap) / cols - gap */
 
 .features-list > .item {
-	flex-basis: calc(100% / 4);
+	flex-basis: calc((100% + var(--grid-gap)) / var(--features-cols) - var(--grid-gap));
 }
 
+/*(100% - gap * (cols - 1)) / cols =
+= (100% - gap * cols + gap) / cols =
+= 100% / cols - gap + gap / cols =
+= (100% + gap) / cols - gap */
+
 .job-list > .item {
-	flex-basis: calc(100% / 3);
+	flex-basis: calc((100% + var(--grid-gap)) / var(--job-cols) - var(--grid-gap));
 }
 
 /* features section */
@@ -104,11 +124,16 @@
 
 .team-list {
 	display: flex;
-	gap: 30px;
+	gap: var(--grid-gap);
 }
 
+/*(100% - gap * (cols - 1)) / cols =
+= (100% - gap * cols + gap) / cols =
+= 100% / cols - gap + gap / cols =
+= (100% + gap) / cols - gap */
+
 .team-list > .item {
-	flex-basis: calc(100% / 4);
+	flex-basis: calc((100% + var(--grid-gap)) / var(--team-cols) - var(--grid-gap));
 
 	background-color: var(--bg-white-color);
 	box-shadow: var(--primary-shadow);
@@ -148,7 +173,7 @@
 	width: 44px;
 	padding: 12px;
 	border-radius: 50%;
-	fill: var(--font-primary-color);
+	fill: var(--icons-primary-color);
 }
 
 .member-contacts .link:focus,
@@ -172,17 +197,22 @@
 .clients-list {
 	display: flex;
 	justify-content: center;
-	gap: 30px;
+	gap: var(--grid-gap);
 }
 
+/*(100% - gap * (cols - 1)) / cols =
+= (100% - gap * cols + gap) / cols =
+= 100% / cols - gap + gap / cols =
+= (100% + gap) / cols - gap */
+
 .clients-list > .item {
+	flex-basis: calc((100% + var(--grid-gap)) / var(--clients-cols) - var(--grid-gap));
 	height: 92px;
-	flex-basis: calc(100% / 6);
 	padding: 16px 0;
 
 	text-align: center;
-	fill: var(--font-primary-color);
-	border: 1px solid var(--font-primary-color);
+	fill: var(--icons-primary-color);
+	border: 1px solid var(--icons-primary-color);
 	border-radius: 4px;
 }
 
