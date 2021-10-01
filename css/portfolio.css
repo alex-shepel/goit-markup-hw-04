@@ -18,6 +18,11 @@
 	text-align: center;
 }
 
+.content-filter > .item:hover,
+.content-filter > .item:focus {
+	box-shadow: var(--primary-shadow);
+}
+
 .content-table {
 	margin-top: 0;
 	display: flex;
@@ -27,6 +32,11 @@
 
 .content-table > .item {
 	flex-basis: calc(100% / 3 - 30px);
+}
+
+.content-table > .item:hover,
+.content-table > .item:focus {
+	box-shadow: var(--primary-shadow);
 }
 
 .content-info {
@@ -70,4 +80,5 @@
 .btn.active {
 	color: var(--font-inversed-color);
 	background-color: var(--accent-color);
+	box-shadow: var(--primary-shadow);
 }

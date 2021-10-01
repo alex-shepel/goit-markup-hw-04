@@ -111,6 +111,7 @@
 	flex-basis: calc(100% / 4);
 
 	background-color: var(--bg-white-color);
+	box-shadow: var(--primary-shadow);
 }
 
 .member-info {

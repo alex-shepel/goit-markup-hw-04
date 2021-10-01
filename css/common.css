@@ -18,6 +18,8 @@
 	--font-primary-color: #757575;
 	--font-inversed-color: #ffffff;
 	--font-trasnparent-color: rgba(255, 255, 255, 0.6);
+
+	--primary-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* utilities */
