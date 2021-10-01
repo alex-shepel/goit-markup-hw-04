@@ -72,11 +72,6 @@
 	flex-basis: calc((100% + var(--grid-gap)) / var(--features-cols) - var(--grid-gap));
 }
 
-/*(100% - gap * (cols - 1)) / cols =
-= (100% - gap * cols + gap) / cols =
-= 100% / cols - gap + gap / cols =
-= (100% + gap) / cols - gap */
-
 .job-list > .item {
 	flex-basis: calc((100% + var(--grid-gap)) / var(--job-cols) - var(--grid-gap));
 }
