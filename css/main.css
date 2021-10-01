@@ -177,36 +177,23 @@
 .clients-list > .item {
 	height: 92px;
 	flex-basis: calc(100% / 6);
+	padding: 16px 0;
 
-	background-repeat: no-repeat;
-	background-position: center;
-
-	border: 1px solid var(--border-color);
+	text-align: center;
+	fill: var(--font-primary-color);
+	border: 1px solid var(--font-primary-color);
 	border-radius: 4px;
 }
 
-.clients-list > .item:nth-child(1) {
-	background-image: url("../images/client-1.svg");
+.clients-list > .item:hover,
+.clients-list > .item:focus {
+	fill: var(--accent-color);
+	border-color: var(--accent-color);
 }
 
-.clients-list > .item:nth-child(2) {
-	background-image: url("../images/client-2.svg");
-}
-
-.clients-list > .item:nth-child(3) {
-	background-image: url("../images/client-3.svg");
-}
-
-.clients-list > .item:nth-child(4) {
-	background-image: url("../images/client-4.svg");
-}
-
-.clients-list > .item:nth-child(5) {
-	background-image: url("../images/client-5.svg");
-}
-
-.clients-list > .item:nth-child(6) {
-	background-image: url("../images/client-6.svg");
+.clients-list .icon {
+	height: 60px;
+	width: 106px;
 }
 
 /* button */
