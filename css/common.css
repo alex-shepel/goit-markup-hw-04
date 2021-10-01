@@ -137,26 +137,20 @@ footer {
 	margin-left: auto;
 }
 
-.header-contacts-list > .item {
+.header-contacts-list .link {
 	display: flex;
-	align-items: center;
 	gap: 10px;
+	fill: var(--font-primary-color);
 }
 
-.header-contacts-list > .item::before {
-	content: "";
-	width: 16px;
+.header-contacts-list .icon {
 	height: 16px;
-	background-position: center;
-	background-repeat: no-repeat;
+	width: 16px;
 }
 
-.header-contacts-list > .item:nth-child(1)::before {
-	background-image: url("../images/envelope.svg");
-}
-
-.header-contacts-list > .item:nth-child(2)::before {
-	background-image: url("../images/smartphone.svg");
+.header-contacts-list .link:hover,
+.header-contacts-list .link:focus {
+	fill: var(--accent-color);
 }
 
 .page-header .logo {
@@ -181,7 +175,7 @@ footer {
 	margin-left: 50px;
 }
 
-.header-contact {
+.header-contacts-list .link {
 	color: var(--font-primary-color);
 }
 
