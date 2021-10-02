@@ -44,7 +44,7 @@ ul {
 	padding-bottom: 200px;
 
 	background-color: var(--bg-dark-gray-color);
-	background-image: linear-gradient(to right, var(--bg-black-transparent-color), var(--bg-black-transparent-color)),
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url("../images/hero-bg.jpg");
 	background-position: center;
 	text-align: center;
@@ -75,14 +75,6 @@ ul {
 	gap: var(--grid-gap);
 }
 
-.features-list > .item {
-	flex-basis: var(--features-basis);
-}
-
-.job-list > .item {
-	flex-basis: var(--job-basis);
-}
-
 /* features section */
 
 .features {
@@ -100,6 +92,10 @@ ul {
 	text-transform: uppercase;
 }
 
+.features-list > .item {
+	flex-basis: var(--features-basis);
+}
+
 .features-list .icon-container {
 	height: 120px;
 	width: 100%;
@@ -113,6 +109,35 @@ ul {
 .features-list .icon {
 	height: 70px;
 	width: 70px;
+}
+
+/* job section */
+
+.job-heading {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 70px;
+	width: 100%;
+
+	color: var(--font-inversed-color);
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.2;
+	text-transform: uppercase;
+
+	background-color: rgba(47, 48, 58, 0.8);
+}
+
+.job-list > .item {
+	position: relative;
+	flex-basis: var(--job-basis);
 }
 
 /* team section */

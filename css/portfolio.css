@@ -49,6 +49,34 @@ ul {
 	box-shadow: var(--primary-shadow);
 }
 
+.content-image-container {
+	position: relative;
+}
+
+.content-modal-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 63px 24px;
+
+	height: 100%;
+	width: 100%;
+
+	color: var(--font-inversed-color);
+	font-size: 18px;
+	line-height: 1.6;
+
+	background-color: rgba(33, 150, 243, 0.9);
+	opacity: 0;
+}
+
+.content-modal-text:hover,
+.content-modal-text:focus {
+	opacity: 1;
+}
+
 .content-info {
 	padding: 20px 24px;
 
