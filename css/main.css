@@ -219,6 +219,52 @@ ul {
 	width: 106px;
 }
 
+/* modal window */
+
+.backdrop {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	height: calc(100% / 1.75);
+	width: calc(100% / 3);
+
+	background-color: var(--bg-white-color);
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+}
+
+.modal > .icon-container {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+
+	height: 30px;
+	width: 30px;
+	padding: 6px;
+
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+}
+
+.modal .icon {
+	height: 16px;
+	width: 16px;
+}
+
 /* button */
 
 .btn {
