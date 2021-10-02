@@ -1,11 +1,23 @@
 /* custom CSS properties */
 
-:root {
+ul {
 	/* content columns */
 	--features-cols: 4;
 	--job-cols: 3;
 	--team-cols: 4;
 	--clients-cols: 6;
+
+	--features-gap: calc((var(--features-cols) - 1) * var(--grid-gap));
+	--features-basis: calc((100% - var(--features-gap)) / var(--features-cols));
+
+	--job-gap: calc((var(--job-cols) - 1) * var(--grid-gap));
+	--job-basis: calc((100% - var(--job-gap)) / var(--job-cols));
+
+	--team-gap: calc((var(--team-cols) - 1) * var(--grid-gap));
+	--team-basis: calc((100% - var(--team-gap)) / var(--team-cols));
+
+	--clients-gap: calc((var(--clients-cols) - 1) * var(--grid-gap));
+	--clients-basis: calc((100% - var(--clients-gap)) / var(--clients-cols));
 }
 
 /* sections common */
@@ -63,17 +75,12 @@
 	gap: var(--grid-gap);
 }
 
-/*(100% - gap * (cols - 1)) / cols =
-= (100% - gap * cols + gap) / cols =
-= 100% / cols - gap + gap / cols =
-= (100% + gap) / cols - gap */
-
 .features-list > .item {
-	flex-basis: calc((100% + var(--grid-gap)) / var(--features-cols) - var(--grid-gap));
+	flex-basis: var(--features-basis);
 }
 
 .job-list > .item {
-	flex-basis: calc((100% + var(--grid-gap)) / var(--job-cols) - var(--grid-gap));
+	flex-basis: var(--job-basis);
 }
 
 /* features section */
@@ -122,13 +129,8 @@
 	gap: var(--grid-gap);
 }
 
-/*(100% - gap * (cols - 1)) / cols =
-= (100% - gap * cols + gap) / cols =
-= 100% / cols - gap + gap / cols =
-= (100% + gap) / cols - gap */
-
 .team-list > .item {
-	flex-basis: calc((100% + var(--grid-gap)) / var(--team-cols) - var(--grid-gap));
+	flex-basis: var(--team-basis);
 
 	background-color: var(--bg-white-color);
 	box-shadow: var(--primary-shadow);
@@ -195,13 +197,8 @@
 	gap: var(--grid-gap);
 }
 
-/*(100% - gap * (cols - 1)) / cols =
-= (100% - gap * cols + gap) / cols =
-= 100% / cols - gap + gap / cols =
-= (100% + gap) / cols - gap */
-
 .clients-list > .item {
-	flex-basis: calc((100% + var(--grid-gap)) / var(--clients-cols) - var(--grid-gap));
+	flex-basis: var(--clients-basis);
 	height: 92px;
 	padding: 16px 0;
 

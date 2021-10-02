@@ -1,8 +1,11 @@
 /* custom CSS properties */
 
-:root {
-	/* content table columns */
+ul {
+	/* content columns */
 	--table-cols: 3;
+
+	--table-gap: calc((var(--table-cols) - 1) * var(--grid-gap));
+	--table-basis: calc((100% - var(--table-gap)) / var(--table-cols));
 }
 
 /* portfolio content */
@@ -37,13 +40,8 @@
 	gap: var(--grid-gap);
 }
 
-/*(100% - gap * (cols - 1)) / cols =
-= (100% - gap * cols + gap) / cols =
-= 100% / cols - gap + gap / cols =
-= (100% + gap) / cols - gap */
-
 .content-table > .item {
-	flex-basis: calc((100% + var(--grid-gap)) / var(--table-cols) - var(--grid-gap));
+	flex-basis: var(--table-basis);
 }
 
 .content-table > .item:hover,
