@@ -51,10 +51,12 @@ ul {
 
 .content-image-container {
 	position: relative;
+	overflow: hidden;
 }
 
 .content-modal-text {
 	position: absolute;
+	display: block;
 	top: 0;
 	left: 0;
 	margin-top: 0;
@@ -70,11 +72,14 @@ ul {
 
 	background-color: rgba(33, 150, 243, 0.9);
 	opacity: 0;
+	transform: translateY(100%);
+	transition: opacity var(--anim-props), transform var(--anim-props);
 }
 
-.content-modal-text:hover,
-.content-modal-text:focus {
+.content-table .item:hover .content-modal-text,
+.content-table .item:focus .content-modal-text {
 	opacity: 1;
+	transform: translateY(0);
 }
 
 .content-info {

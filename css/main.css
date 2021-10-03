@@ -96,7 +96,7 @@ ul {
 	flex-basis: var(--features-basis);
 }
 
-.features-list .icon-container {
+.features-list .close-btn {
 	height: 120px;
 	width: 100%;
 	padding: 25px 0;
@@ -247,7 +247,6 @@ ul {
 /* modal window */
 
 .backdrop {
-	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -255,14 +254,20 @@ ul {
 	height: 100%;
 	width: 100%;
 
+	opacity: 1;
 	background-color: rgba(0, 0, 0, 0.2);
+	transition: opacity var(--anim-props);
+}
+
+.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
 }
 
 .modal {
 	position: relative;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 
 	height: calc(100% / 1.75);
 	width: calc(100% / 3);
@@ -270,9 +275,15 @@ ul {
 	background-color: var(--bg-white-color);
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 4px;
+	transform: translate(-50%, -50%) scale(1);
+	transition: transform var(--anim-props);
 }
 
-.modal > .icon-container {
+.backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal > .btn-close {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -281,13 +292,9 @@ ul {
 	width: 30px;
 	padding: 6px;
 
+	background-color: var(--bg-white-color);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-}
-
-.modal .icon {
-	height: 16px;
-	width: 16px;
 }
 
 /* button */

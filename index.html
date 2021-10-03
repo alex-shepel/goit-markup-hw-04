@@ -27,7 +27,6 @@
 					<ul class="site-nav-list">
 						<li class="item">
 							<a class="link current" href="./index.html">Студия</a>
-							<div class="current-accent"></div>
 						</li>
 						<li class="item">
 							<a class="link" href="./portfolio.html">Портфолио</a>
@@ -66,7 +65,7 @@
 						Эффективные решения <br />
 						для вашего бизнеса
 					</h1>
-					<button class="btn" type="button">Заказать услугу</button>
+					<button class="btn" data-modal-open type="button">Заказать услугу</button>
 				</div>
 			</section>
 
@@ -76,7 +75,7 @@
 						<h2 class="section-title visually-hidden">Наши преимущества</h2>
 						<ul class="features-list">
 							<li class="item">
-								<div class="icon-container">
+								<div class="close-btn">
 									<svg class="icon">
 										<use href="./images/icons.svg#antenna"></use>
 									</svg>
@@ -87,7 +86,7 @@
 								</p>
 							</li>
 							<li class="item">
-								<div class="icon-container">
+								<div class="close-btn">
 									<svg class="icon">
 										<use href="./images/icons.svg#clock"></use>
 									</svg>
@@ -98,7 +97,7 @@
 								</p>
 							</li>
 							<li class="item">
-								<div class="icon-container">
+								<div class="close-btn">
 									<svg class="icon">
 										<use href="./images/icons.svg#diagram"></use>
 									</svg>
@@ -109,7 +108,7 @@
 								</p>
 							</li>
 							<li class="item">
-								<div class="icon-container">
+								<div class="close-btn">
 									<svg class="icon">
 										<use href="./images/icons.svg#astronaut"></use>
 									</svg>
@@ -334,15 +333,17 @@
 				</div>
 			</section>
 
-			<div class="backdrop">
+			<div class="backdrop is-hidden" data-modal>
 				<div class="modal">
-					<div class="icon-container">
-						<svg class="icon">
+					<button class="btn-close" data-modal-close>
+						<svg height="16" width="16">
 							<use href="../images/icons.svg#close"></use>
 						</svg>
-					</div>
+					</button>
 				</div>
 			</div>
+
+			<script src="./js/modal.js"></script>
 		</main>
 
 		<footer class="footer">
